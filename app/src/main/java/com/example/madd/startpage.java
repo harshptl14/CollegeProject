@@ -1,9 +1,7 @@
 package com.example.madd;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,18 +18,40 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainnActivity extends AppCompatActivity {
+public class startpage extends AppCompatActivity {
 
     ListView listView;
 
-    String mTitle[] = {"Facebook", "WhatsApp", "Twitter", "Instagram", "Youtube"};
-    String mDescription[] = {"Facebook Description", "WhatsApp Description", "Twitter Description", "Instagram Description", "Youtube Description"};
-    int images[] = {R.drawable.espresso, R.drawable.cappuchino, R.drawable.americano, R.drawable.late, R.drawable.coffee};
+    String mTitle[] = {"Espresso", "Cappuchino", "Americano", "Latte", "Macchiato"};
+    String mDescription[] = {"Foundation of most coffee drinks, like lattes and macchiatos",
+            "Latte made with more foam than steamed milk, with a sprinkle of cocoa powder",
+            "Similar flavor to black coffee,consists of an espresso shot diluted in hot water",
+            "Comprised of a shot of espresso and steamed milk with just a touch of foam",
+            "Another espresso-based drink that has a small amount of foam on top"};
+    int images[] = {R.drawable.espresso, R.drawable.cappuchino, R.drawable.americano, R.drawable.late, R.drawable.machhi};
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.appbaricon, menu);
+        return  true;
+    }
+
+    @Override
+    public  boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.about :
+                startActivity(new Intent(startpage.this, MainActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_startpage);
 
         listView = findViewById(R.id.listView);
 

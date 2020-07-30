@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:id="@+id/appbar"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout

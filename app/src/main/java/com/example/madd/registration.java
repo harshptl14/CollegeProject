@@ -32,7 +32,7 @@ public class registration extends AppCompatActivity {
             public void onClick(View view) {
                 if(validate()){
                                 Toast.makeText(registration.this, "registration Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(registration.this, MainnActivity.class));
+                                startActivity(new Intent(registration.this, startpage.class));
 
                     }
                 else{
@@ -45,7 +45,7 @@ public class registration extends AppCompatActivity {
         userLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(registration.this, MainnActivity.class));
+                startActivity(new Intent(registration.this, startpage.class));
             }
         });
     }
