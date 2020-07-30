@@ -232,7 +232,7 @@
             </GridLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/order"
                 android:layout_width="234dp"
                 android:layout_height="64dp"
                 android:background="@drawable/button"

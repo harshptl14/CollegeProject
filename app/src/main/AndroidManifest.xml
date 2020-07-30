@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splashscreen"
+        <activity android:name=".Tablelayout"
+            android:label="Payment"/>
+        <activity
+            android:name=".Splashscreen"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +25,11 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".AnotherActivity"
-            android:parentActivityName=".startpage"
-            />
+            android:parentActivityName=".startpage" />
         <activity android:name=".startpage" />
         <activity
             android:name=".registration"
-            android:theme="@style/AppTheme.colorAccent">
-        </activity>
+            android:theme="@style/AppTheme.colorAccent"/>
     </application>
 
 </manifest>

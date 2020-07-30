@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AnotherActivity extends AppCompatActivity {
 
     ImageView imageView;
     TextView title, description;
     int position;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_another);
-
+        button = (Button)findViewById(R.id.order);
         ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
@@ -105,6 +109,16 @@ public class AnotherActivity extends AppCompatActivity {
 
             actionBar.setTitle(aTitle);
         }
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    startActivity(new Intent(AnotherActivity.this, Tablelayout.class));
+
+
+            }
+        });
 
     }
 
